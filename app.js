@@ -148,6 +148,8 @@ const messages = {
     }
 };
 
+let musicStarted = false;
+const bgMusic = document.getElementById("bg-music");
 
 (function () {
     const backdrop = document.getElementById("modal-backdrop");
@@ -157,9 +159,17 @@ const messages = {
     const dayCards = document.querySelectorAll(".day-card");
 
     function openModal(day) {
-        const today = new Date().getDate(); // 1–31
-        // Block access if it's not the correct day
-        if (day != today) {
+        const today = new Date().getDate();
+
+        // Start music on first user interaction
+        if (!musicStarted) {
+            bgMusic.volume = 0.2;  // soft start
+            bgMusic.play().catch(e => { });
+            musicStarted = true;
+        }
+
+        // Block if it's not today's date
+        if (day > today) {
             modalTitle.textContent = "Not Yet";
             modalText.textContent = "You can’t open this day yet.\nBe patient, my love.";
             backdrop.classList.add("is-visible");
@@ -167,16 +177,11 @@ const messages = {
             return;
         }
 
-        // If it's the correct day → show the real message
+        // Load the message
         const entry = messages[day];
         if (entry) {
             modalTitle.textContent = entry.title;
             modalText.textContent = entry.text;
-        } else {
-            modalTitle.textContent = `Day ${day}`;
-            modalText.textContent =
-                "I didn’t write this day yet,\n" +
-                "but if you’re reading this, just know I love you a lot.";
         }
 
         backdrop.classList.add("is-visible");
