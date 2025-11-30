@@ -160,12 +160,22 @@ const bgMusic = document.getElementById("bg-music");
 
     function openModal(day) {
         const today = new Date().getDate();
+        const month = new Date().getMonth() + 1; // Months are zero-based
 
         // Start music on first user interaction
         if (!musicStarted) {
             bgMusic.volume = 0.2;  // soft start
             bgMusic.play().catch(e => { });
             musicStarted = true;
+        }
+
+        if (month < 12) {
+            // Block if it's not December
+            modalTitle.textContent = "Too Early";
+            modalText.textContent = "You can't open this yet.\nPlease wait for December.";
+            backdrop.classList.add("is-visible");
+            document.body.classList.add("modal-open");
+            return;
         }
 
         // Block if it's not today's date
