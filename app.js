@@ -124,8 +124,8 @@ const messages = {
     },
     // Done
     26: {
-        title: "Day 26 – Party Night",
-        text: "Christmas may be over,\nbut my love for you isn’t going anywhere.\nLet’s celebrate us tonight!"
+        title: "Day 26 – After Christmas",
+        text: "Christmas may be over,\nbut my love for you isn’t going anywhere."
     },
     // Done
     27: {
