@@ -8,8 +8,8 @@ const messages = {
     },
     // Done
     2: {
-        title: "Day 2 – Your Smile",
-        text: "One of my favorite things in the world is your smile.\nIt makes my day feel special like you."
+        title: "Day 2 – A Gift for You",
+        text: "Looking for a gift? Here it is.\nOn your way to Beirut, pass through Chekka and say hello to your Santa's parents."
     },
     // Done
     3: {
@@ -18,8 +18,13 @@ const messages = {
     },
     // Done
     4: {
-        title: "Day 4 – You Deserve A Gift",
-        text: "Wait for it ...\nYou deserve a gift now and always."
+        title: "Day 4 – You’re Beautiful",
+        text: "You are beautiful.\nInside and out.\nNever forget that."
+    },
+    // Done
+    5: {
+        title: "Day 5 – Your Smile",
+        text: "One of my favorite things in the world is your smile.\nIt makes my day feel special like you."
     },
     // Done
     6: {
@@ -43,8 +48,8 @@ const messages = {
     },
     // Done
     10: {
-        title: "Day 10 – You’re Beautiful",
-        text: "You are beautiful.\nInside and out.\nNever forget that."
+        title: "Day 10 – You Deserve A Gift",
+        text: "Wait for it ...\nYou deserve a gift now and always."
     },
     // Done
     11: {
@@ -76,6 +81,7 @@ const messages = {
         title: "Day 16 – 4 Days Left?",
         text: "Only 4 days left until I see you!\nThis what you think."
     },
+    // 17 is missing
     // Done
     18: {
         title: "Day 18 – A Little Reminder",
