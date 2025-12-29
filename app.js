@@ -83,6 +83,10 @@ const messages = {
     },
     // 17 is missing
     // Done
+    17: {
+        title: "I LOVE YOU SO MUCH.",
+        text: "Sorry I missed this one!\nBut I love you SO MUCH."
+    },
     18: {
         title: "Day 18 – A Little Reminder",
         text: "You don’t have to be perfect.\nYou just have to be you.\nAnd that’s more than enough."
@@ -145,7 +149,10 @@ const messages = {
     // Done
     30: {
         title: "Day 30 – You & Me",
-        text: "Before the year ends,\nI want you to remember this:\nI choose you.\nAlways."
+        text: `Before the year ends,\nI want you to remember this:\nI choose you. Always.
+        <a target="_blank" href="https://calendar.app.google/3WANoWNhVV91WyxK7">
+        🎁 Click here for your gift
+        </a>`
     },
     // Done
     31: {
@@ -197,7 +204,8 @@ const bgMusic = document.getElementById("bg-music");
         const entry = messages[day];
         if (entry) {
             modalTitle.textContent = entry.title;
-            modalText.textContent = entry.text;
+            modalText.innerHTML = entry.text.replace(/\n/g, "<br>");
+
         }
 
         backdrop.classList.add("is-visible");
